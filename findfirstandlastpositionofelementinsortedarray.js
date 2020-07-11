@@ -5,11 +5,13 @@ let target = 8
 
 
 //O(logn) solution that uses binary search twice to find the two indices.
+//https://rosettacode.org/wiki/Binary_search
 
 let low = 0
 let high = nums.length - 1
 let start, end
 
+//This binary search finds the leftmost place where the element can be inserted/found
 while (low < high) {
     let mid = Math.floor((low + high) / 2)
     
@@ -25,8 +27,9 @@ if (nums[low] !== target) {
 }
 
 start = low 
-
 high = nums.length - 1
+
+//This binary search finds the rightmost place where the element can be inserted/found
 while (low < high) {
     let mid = Math.floor((low + high) / 2)
 
